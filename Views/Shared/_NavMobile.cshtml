@@ -1,0 +1,111 @@
+﻿<link rel="stylesheet" href="~/css/MobileNavCSS.css" asp-append-version="true" />
+
+<div id="mySidenav" class="sidenav">
+    <div class="profile-option-navside">
+        <div class="profile-option-navside-img">
+            <img src="https://img.icons8.com/fluency/48/user-male-circle--v1.png" alt="user-male-circle--v1" />
+        </div>
+        <div class="profile-option-navside-text">
+            <p>ชื่อ : admin01</p>
+            <p>บทบาท : ผู้ดูแลระบบ</p>
+        </div>
+    </div>
+    <div class="dropdown-navside">
+        <a href="#" onclick="toggleDropdown('dropdown1')">จองห้องประชุม <i class='bx bxs-chevron-down arrow'></i></a>
+        <div id="dropdown1" class="dropdown-content-navside">
+            <a asp-action="Seraching" asp-controller="RoomManage" class="optiondropdown-navside">ค้นหาห้องประชุม</a>
+            <a class="optiondropdown-navside">สรุปการจอง</a>
+        </div>
+    </div>
+
+    <div class="dropdown-navside">
+        <a href="#" onclick="toggleDropdown('dropdown2')">รายงาานห้องประชุม <i class='bx bxs-chevron-down arrow'></i></a>
+        <div id="dropdown2" class="dropdown-content-navside">
+            <a class="optiondropdown-navside">ไม่มีข้อมูล</a>
+        </div>
+    </div>
+
+    <div class="dropdown-navside">
+        <a href="#" onclick="toggleDropdown('dropdown3')">สรุปรายงาน <i class='bx bxs-chevron-down arrow'></i></a>
+        <div id="dropdown3" class="dropdown-content-navside">
+            <a class="optiondropdown-navside">ไม่มีข้อมูล</a>
+        </div>
+    </div>
+
+    <div class="dropdown-navside">
+        <a href="#" onclick="toggleDropdown('dropdown4')">จัดการบัญชีผู้ใช้ <i class='bx bxs-chevron-down arrow'></i></a>
+        <div id="dropdown4" class="dropdown-content-navside">
+            <a class="optiondropdown-navside">ไม่มีข้อมูล</a>
+        </div>
+    </div>
+
+    <a asp-area="" asp-controller="Home" asp-action="Index">จัดการวันหยุด</a>
+
+    <a asp-area="" asp-controller="Home" asp-action="Index">จัดการข้อกำหนด</a>
+
+    <a class="logout-navside" asp-area="" asp-action="Login" asp-controller="Login">ออกจากระบบ</a>
+
+</div>
+
+<script>
+    var navOpen = false;
+
+    function toggleNav() {
+        if (navOpen) {
+            closeNav();
+        } else {
+            openNav();
+        }
+        navOpen = !navOpen;
+    }
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+        document.body.classList.add('no-scroll-open-sidenav');
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0%";
+        document.body.classList.remove('no-scroll-open-sidenav');
+        var allDropdowns = document.querySelectorAll('.dropdown-content-navside');
+        allDropdowns.forEach(function (dropdown) {
+            dropdown.style.height = "0";
+        });
+
+    }
+
+    // function toggleDropdown(dropdownId) {
+    //     var allDropdowns = document.querySelectorAll('.dropdown-content-navside');
+    //     allDropdowns.forEach(function (dropdown) {
+    //         if (dropdown.id !== dropdownId) {
+    //             dropdown.style.display = "none";
+    //         }
+    //     });
+
+    //     var dropdownContent = document.getElementById(dropdownId);
+    //     if (dropdownContent.style.display === "block") {
+    //         dropdownContent.style.display = "none";
+    //         document.activeElement.blur();
+    //     } else {
+    //         dropdownContent.style.display = "block";
+    //     }
+    // }
+
+    function toggleDropdown(dropdownId) {
+        var allDropdowns = document.querySelectorAll('.dropdown-content-navside');
+        allDropdowns.forEach(function (dropdown) {
+            if (dropdown.id !== dropdownId) {
+                dropdown.style.height = "0";
+            }
+        });
+
+        var dropdownContent = document.getElementById(dropdownId);
+        if (dropdownContent.style.height === "0px" || dropdownContent.style.height === "") {
+            dropdownContent.style.height = dropdownContent.scrollHeight + "px";
+        } else {
+            dropdownContent.style.height = "0";
+            document.activeElement.blur();
+        }
+    }
+
+</script>

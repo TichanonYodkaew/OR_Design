@@ -1,0 +1,157 @@
+﻿.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    font-family: "DB HelvethaicaMon X Cond";
+    /*overflow-x: visible;*/
+    overflow-y: auto;
+
+    transition: 0.5s;
+    padding-top: 40px;
+    color: #0D385B;
+    top: 40px;
+}
+
+    .sidenav a {
+        padding: 10px 2px 10px 12px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 28px;
+        color: #0D385B;
+        display: block;
+        transition: 0.3s;
+        white-space: nowrap;
+    }
+        
+        .sidenav a .arrow {
+            vertical-align: middle;
+            transition: all 0.3s ease;
+            text-align: right; /* Change text-align to right */
+            margin-left: auto;
+        }
+
+        /*.sidenav a:hover {
+            background-color: #0D385B;
+            color: #ffffff;
+        }
+
+            .sidenav a:hover .arrow {
+                transform: rotate(90deg);
+            }*/
+
+        .sidenav a:active,
+        .sidenav a:focus {
+            background-color: #0D385B;
+            color: #ffffff;
+        }
+
+            .sidenav a:active .arrow,
+            .sidenav a:focus .arrow {
+                transform: rotate(90deg);
+            }
+
+    .sidenav .dropdown-navside {
+        position: relative;
+        width: 100%;
+        display: inline-block;
+    }
+
+/*.dropdown-content-navside {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}*/
+.dropdown-content-navside {
+    display: block; /* Changed from none */
+    height: 0;
+    overflow: hidden;
+    /*position: absolute;  Keep this if you want absolute positioning */
+    background-color: #ffffff;
+    /*min-width: 160px;*/
+    transition: 0.5s;
+    /*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
+    z-index: 2;
+}
+
+    .dropdown-content-navside .optiondropdown-navside {
+        color: #0D385B !important;
+        font-weight: 400;
+        padding: 6px 20px;
+        display: block;
+        border: 1px solid #0D385B;
+        text-decoration: none;
+    }
+
+        .dropdown-content-navside .optiondropdown-navside:hover {
+            background-color: #0D385B;
+            color: #ffffff !important;
+            border: 1px solid #9AA1B1;
+        }
+
+/*.dropdown-navside:hover .dropdown-content-navside {
+    display: block;
+}*/
+
+@media screen and (max-height: 768px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+}
+
+.logout-navside {
+    background-color: #EC1C24 !important;
+    color: #ffffff !important;
+}
+
+    .logout-navside:hover {
+        color: #EC1C24 !important;
+        background-color: #ffffff !important;
+    }
+
+.profile-option-navside {
+    display: grid;
+    grid-template-columns: 20% 70%;
+    align-items: center;
+    column-gap: 5%;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.profile-option-navside-img {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background-color:white;
+    z-index:2;
+}
+
+    .profile-option-navside-img img {
+        background-color: white;
+        height: 72px;
+        width: 72px;
+    }
+
+.profile-option-navside-text {
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    width:100%;
+    z-index:1;
+}
+
+    .profile-option-navside-text p {
+        font-size: 28px;
+        margin: 0 0 0 0;
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+body.no-scroll-open-sidenav {
+    overflow: hidden;
+}

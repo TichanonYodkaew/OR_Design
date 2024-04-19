@@ -1,0 +1,65 @@
+﻿<link rel="stylesheet" href="~/css/LoginPageCSS.css" asp-append-version="true" />
+
+@* <body class="log-body">
+    <div class="log-container">
+        <div class="body d-md-flex align-items-center justify-content-between">
+            <div class="box-1 mt-md-0 mt-5">
+                <img src="https://s3-alpha-sig.figma.com/img/d806/b0b6/c3d1cf523586a7546d5e144b884b2a1d?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yn34QeQkfU0TW8FN0x3Gs32WZGrEDH~~Oc5Ror3kahukq7EXSxepPWksC5ArIGl9wJLXVFCeEUX6gcvNoLzXnmOtVPrp5uBsTvk-4hc-4W5zaLTyYQ8RxpVuf5yNjCgCXY2ETctU1xr-c4dxa~GiyaMalggRBiEQSzo87e2Ym~WmqvfnS5Rpn27Hsrd09Kbfnbc3tnR1HuaG4sKsaNbTeiKzsZrVhPgBHE2OdJpM0ad6YmAyZ7KiqvwOVxYgekBp4Jcbcer2Y89U0MDcfhkF9yv2gVvx6Tjo~BbhkqslrTxLghdNjJq8YChXyFARtaeouOk7gfFXLRy76YY6MBCalQ__"
+                     class="" alt="">
+            </div>
+            <div class=" box-2 d-flex flex-column h-100">
+                <div class="mt-5">
+                    <p class="mb-1 h-1">Create Account.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body> *@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-xl-9 mx-auto">
+                <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+                    <div class="card-img-left d-none d-md-flex">
+                        <!-- Background image for card set in CSS! -->
+                    </div>
+                    <div class="card-body p-4 p-sm-5">
+                        @* <h5 class="card-title text-center mb-5 fw-light fs-5">Logo</h5> *@
+                        <div class="logo card-title text-center mb-5 fw-light fs-5">
+                            <img src="https://s3-alpha-sig.figma.com/img/a3b7/08cd/6bcd55f1d74d0da7da210b361e6d1b02?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DhQL1pzIGpth50td2fB6lJuN~JgzL0NynAruQqSAxeEow~cAO4vFRlylfDrZpvYOMaYWaddVJtrKxxD30AenUeWYjB3Y~j1matGkqSrNAS1aHGun8e~4W3PzQHONvmtnAXVY7IZPvFN9MJPdHdPnxHy54u49p-QXQVyREvu6tbTeNXds09~~BsP--tMjtzmw0G-b0cg~3FcziWCuP2gf2uCBOXhTPbSP1AnOoPwUG5FBTCs-h7YASmi9ZB2~AhQNHeish2aw9EOZ6-0~du8uy0aa6-OBTZxHCUB4lYvxyWHc5LhSbnWseEN6imBW6KQJZc7FINSVZCPtPbZUqmtDHw__" />
+                        </div>
+                        <form asp-action="Logins" asp-controller="Login">
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername">
+                                <label for="floatingInputUsername">กรอกชื่อบัญชีผู้ใช้งาน</label>
+                            </div>
+                            <br />
+                            <div class="form-floating mb-3 mt-4">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword">กรอกรหัสผ่าน</label>
+                            </div>
+
+                            <a class="d-block mt-2 small align-right" href="#">ลืมรหัสผ่าน?</a>
+
+                            <div class="align-right mt-5">
+                                <button class="button-3 align-right" role="button" type="submit">ลงชื่อเข้าใช้</button>
+                            </div>
+
+
+                            @*  <div class="d-grid mb-2">
+                            <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">ลงชื่อเข้าใช้</button>
+                            <!-- HTML !-->
+
+                            </div> *@
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@* @await Html.PartialAsync("_Footer") *@

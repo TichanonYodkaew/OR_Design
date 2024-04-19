@@ -1,0 +1,613 @@
+﻿<link rel="stylesheet" href="~/css/BookingManageCSS.css" asp-append-version="true" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+
+    <div style="text-align:center;">
+        <p class="Topic">ค้นหาเพื่อจองห้อง</p>
+        <p class="SubTopic">จองห้องประชุม</p>
+    </div>
+
+    <div class="container">
+
+        <div class="form-container">
+            <div class="form-container-item">
+
+                <input type="text" placeholder="วันที่"
+                       onfocus="(this.type='date')"
+                       onblur="(this.type='text')"
+                       class="icon-carlendar">
+            </div>
+        </div>
+
+        <div class="form-container-filter">
+            <div class="form-container-filter-item">
+                <input type="text" placeholder="  ค้นหาที่นี่..." class="icon-search" /> <i class="fa-solid fa-filter" onclick="ShowFilterOption()" style="width:24px"></i>
+            </div>
+            <div id="filter-search-option" style="display:none;">
+                <div class="parent-grid-container-filter">
+                    <div class="grid-container-filter">
+                        <!-- grid item 1 -->
+                        <div class="grid-item-filter">
+                            <div class="headlabel">
+                                เวลาเริ่ม :
+                            </div>
+                            <select>
+                                <option value=""></option>
+                                <option value="0">8.00</option>
+                                <option value="0">8.30</option>
+                                <option value="0">9.00</option>
+                                <option value="0">9.30</option>
+                                <option value="0">10.00</option>
+                                <option value="0">10.30</option>
+                                <option value="0">11.00</option>
+                                <option value="0">11.30</option>
+                                <option value="0">12.00</option>
+                                <option value="0">12.30</option>
+                                <option value="0">13.00</option>
+                                <option value="0">13.30</option>
+                                <option value="0">14.00</option>
+                                <option value="0">14.30</option>
+                                <option value="0">15.00</option>
+                                <option value="0">15.30</option>
+                                <option value="0">16.00</option>
+                                <option value="0">16.00</option>
+                                <option value="0">17.00</option>
+                            </select>
+                        </div>
+                        <!-- grid item 2 -->
+                        <div class="grid-item-filter">
+                            <div class="headlabel">
+                                เวลาสิ้นสุด :
+                            </div>
+                            <select>
+                                <option value=""></option>
+                                <option value="0">8.00</option>
+                                <option value="0">8.30</option>
+                                <option value="0">9.00</option>
+                                <option value="0">9.30</option>
+                                <option value="0">10.00</option>
+                                <option value="0">10.30</option>
+                                <option value="0">11.00</option>
+                                <option value="0">11.30</option>
+                                <option value="0">12.00</option>
+                                <option value="0">12.30</option>
+                                <option value="0">13.00</option>
+                                <option value="0">13.30</option>
+                                <option value="0">14.00</option>
+                                <option value="0">14.30</option>
+                                <option value="0">15.00</option>
+                                <option value="0">15.30</option>
+                                <option value="0">16.00</option>
+                                <option value="0">16.00</option>
+                                <option value="0">17.00</option>
+                            </select>
+                        </div>
+                        <!-- grid item 3 -->
+                        <div class="grid-item-filter">
+                            <div class="headlabel">
+                                พื้นที่ :
+                            </div>
+                            <select>
+                                <option value=""></option>
+                                <option value="0">สาขาสำนักงานใหญ่</option>
+                                <option value="0">สาขาคลังน้ำมันพระโขนง</option>
+                            </select>
+                        </div>
+                        <!-- grid item 4 -->
+                        <div class="grid-item-filter">
+                            <div class="headlabel">
+                                อาคาร :
+                            </div>
+                            <select>
+                                <option value=""></option>
+                                <option value="0">อาคารส่วนกลาง</option>
+                                <option value="0">อาคาร เอ</option>
+                                <option value="0">อาคาร บี</option>
+                            </select>
+                        </div>
+                        <!-- grid item 5 -->
+                        <div class="grid-item-filter">
+                            <div class="headlabel">
+                                ชั้น :
+                            </div>
+                            <select>
+                                <option value=""></option>
+                                <option value="0">1</option>
+                                <option value="0">2</option>
+                                <option value="0">3</option>
+                                <option value="0">4</option>
+                                <option value="0">5</option>
+                                <option value="0">6</option>
+                                <option value="0">7</option>
+                                <option value="0">8</option>
+                                <option value="0">9</option>
+                                <option value="0">10</option>
+                                <option value="0">11</option>
+                                <option value="0">12</option>
+                            </select>
+                        </div>
+                        <!-- grid item 6 -->
+                        <div class="grid-item-filter">
+                            <div class="headlabel">
+                                ชื่อห้องประชุม :
+                            </div>
+                            <select>
+                                <option value=""></option>
+                                <option value="0">101</option>
+                                <option value="0">102</option>
+                                <option value="0">103</option>
+                            </select>
+                        </div>
+                        <!-- grid item 7 -->
+                        <div class="grid-item-filter">
+                            <div class="headlabel">
+                                ความจุ :
+                            </div>
+                            <input type="number" min="0" max="500" oninput="checkCapacityInput(this)" />
+
+                        </div>
+                        <!-- grid item 8 -->
+                        <div class="grid-item-filter">
+                            <div class="headlabel">
+                                สิ่งอำนวยความสะดวก :
+                            </div>
+                            <select>
+                                <option value=""></option>
+                                <option value="0">โต๊ะ</option>
+                                <option value="0">เก้าอี้</option>
+                                <option value="0">พัดลม</option>
+                                <option value="0">แอร์</option>
+                                <option value="0">ไมค์</option>
+                                <option value="0">เชื่อมต่อหน้าจอแบบไร้สาย</option>
+                            </select>
+                        </div>
+                        <!-- grid item 9 -->
+                        <div hidden class="grid-item-filter"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="form-container-three-grid-shape" style="margin-top:20px">
+            <div class="form-container-item-three-grid-shape">
+                <div id="status1" class="shape-101" style="background-color:#757575"></div>
+                <label for="status1">มีการใช้งานห้อง</label>
+            </div>
+            <div class="form-container-item-three-grid-shape">
+                <div id="status1" class="shape-101" style="background-color:#118AB2"></div>
+                <label for="status1">มีการจอง</label>
+            </div>
+            <div class="form-container-item-three-grid-shape">
+                <div id="status1" class="shape-101" style="background-color:#4AC05D"></div>
+                <label for="status1">ไม่มีการจอง</label>
+            </div>
+        </div>
+
+        <div class="block-table">
+
+            <table class="time-reserve-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2" width="176px">ชื่อห้องประชุม</th>
+                        <th colspan="19" style="border-bottom-color:white;">เวลา</th>
+                        <th rowspan="2" width="132.27px">ค่าใช้จ่าย/ชั่วโมง</th>
+                        <th rowspan="2">จัดการ</th>
+                    </tr>
+                    <tr>
+                        <th class="time-col-head">8.00</th>
+                        <th class="time-col-head">8.30</th>
+                        <th class="time-col-head">9.00</th>
+                        <th class="time-col-head">9.30</th>
+                        <th class="time-col-head">10.00</th>
+                        <th class="time-col-head">10.30</th>
+                        <th class="time-col-head">11.00</th>
+                        <th class="time-col-head">11.30</th>
+                        <th class="time-col-head">12.00</th>
+                        <th class="time-col-head">12.30</th>
+                        <th class="time-col-head">13.00</th>
+                        <th class="time-col-head">13.30</th>
+                        <th class="time-col-head">14.00</th>
+                        <th class="time-col-head">14.30</th>
+                        <th class="time-col-head">15.00</th>
+                        <th class="time-col-head">15.30</th>
+                        <th class="time-col-head">16.00</th>
+                        <th class="time-col-head">16.30</th>
+                        <th class="time-col-head">17.00</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--  first row  -->
+                    <tr>
+                        <td rowspan="3">
+                            ห้องประชุม 101
+                        </td>
+                        <td colspan="4" class="force-td-blank">
+                            <div class="shape-used-room">
+                                กำหนดงานประจำสัปดาห์
+                            </div>
+                        </td>
+                        <td colspan="15" class="force-td-blank">
+                            <div class="shape-blank-room"></div>
+                        </td>
+                        <td rowspan="3">
+                            200
+                        </td>
+                        <td rowspan="3">
+                            <button class="button-common" onclick="openPopup(1)" style="background-color:#9AA1B1;">
+                                รายละเอียด
+                            </button>
+                            <a asp-action="Booking" asp-controller="RoomManage" class="button-common" style="background-color:#4AC05D; margin-top:5px;">
+                                จอง
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="force-td-blank">
+                            <div class="shape-blank-room"></div>
+                        </td>
+                        <td colspan="4" class="reserved-room force-td-blank">
+                            <div class="shape-reserved-room">
+                                รายงานความก้าวหน้าโครงการ
+                            </div>
+                        </td>
+                        <td colspan="4" class="empty-room force-td-blank">
+                            <div class="shape-non-reserve-room"></div>
+                        </td>
+                        <td colspan="7" class="force-td-blank">
+                            <div class="shape-blank-room"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="12" style="border-top-color:white; border-left-color:white;border-right-color:white;border-bottom-color:#757575;">
+                        </td>
+                        <td colspan="5" class="reserved-room" style="border-top-color:white;border-left-color:white;border-right-color:white; border-bottom-color:#757575;">
+                            <div class="shape-reserved-room">
+                                แนวทางการพัฒนาบุคคลากร ประจำเดือน
+                            </div>
+                        </td>
+                        <td colspan="2" style="border-top-color:white; border-bottom-color:#757575;">
+                            <div class="shape-non-reserve-room"></div>
+                        </td>
+                    </tr>
+                    <!--  first row  -->
+                    <!--  second row  -->
+                    <tr>
+                        <td rowspan="3">
+                            ห้องประชุม 102
+                        </td>
+                        <td class="empty-room force-td-blank">
+                            <div class="shape-non-reserve-room"></div>
+                        </td>
+                        <td colspan="3" class="reserved-room force-td-blank">
+                            <div class="shape-reserved-room">
+                                ซ้อมการนำเสนอโครงการ
+                            </div>
+                        </td>
+                        <td colspan="15" class="force-td-blank">
+                            <div class="shape-blank-room"></div>
+                        </td>
+                        <td rowspan="3">
+                            ไม่มี
+                        </td>
+                        <td rowspan="3">
+                            <button class="button-common" onclick="openPopup(2)" style="background-color:#9AA1B1;">
+                                รายละเอียด
+                            </button>
+                            <a asp-action="Booking" asp-controller="RoomManage" class="button-common" style="background-color:#4AC05D; margin-top:5px;">
+                                จอง
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="force-td-blank">
+                            <div class="shape-blank-room"></div>
+                        </td>
+                        <td colspan="13" class="force-td-blank">
+                            <div class="shape-reserved-room">
+                                โครงการนวัตกรรมเพื่อสิงแวดล้อมอย่างยั่งยืน
+                            </div>
+                        </td>
+                        <td colspan="2" class="empty-room force-td-blank">
+                            <div class="shape-non-reserve-room"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="19" style="color:white; border-top-color:white;">
+                            <div class="shape-blank-room"></div>
+                        </td>
+                    </tr>
+                    <!--  second row  -->
+                    <!--  third row  -->
+                    <tr>
+                        <td rowspan="3">
+                            ห้องประชุม 103
+                        </td>
+                        <td colspan="8" class="force-td-blank">
+                            <div class="shape-reserved-room">
+                                กำหนดงานประจำสัปดาห์
+                            </div>
+                        </td>
+                        <td colspan="6" class="force-td-blank">
+                            <div class="shape-non-reserve-room"></div>
+                        </td>
+                        <td colspan="5" class="force-td-blank">
+                            <div class="shape-blank-room"></div>
+                        </td>
+                        <td rowspan="3">
+                            150
+                        </td>
+                        <td rowspan="3">
+                            <button class="button-common" onclick="openPopup(3)" style="background-color:#9AA1B1;">
+                                รายละเอียด
+                            </button>
+                            <a asp-action="Booking" asp-controller="RoomManage" class="button-common" style="background-color:#4AC05D; margin-top:5px;">
+                                จอง
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="14" class="force-td-blank">
+                            <div class="shape-blank-room"></div>
+                        </td>
+                        <td colspan="5" class="reserved-room force-td-blank">
+                            <div class="shape-reserved-room">
+                                รายงานความก้าวหน้าโครงการ
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="19" style="color:white; border-top-color:white;">
+                            <div class="shape-blank-room"></div>
+                        </td>
+                    </tr>
+                    <!--  third row  -->
+
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div><!-- end container -->
+
+
+    <div id="popup-container1" class="popup-container">
+        <!-- Popup content goes here -->
+        <div class="popup-content">
+            <div style="text-align:center; margin-top:20px;">
+                <p class="popup-Topic">รายละเอียด</p>
+            </div>
+            <div class="popup-content-detail">
+                <div class="popup-content-detail-left">
+                    <img src="https://s3-alpha-sig.figma.com/img/1768/2888/5899620cab351b043921b3ecdcd2ad9d?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZhBHlEwwGcUeCnxjD2YAS37~oPhUVuo6CAKcHywpjGUmXsaJ22WFyhrOzb~7CKCukibVoK1NXkCyxHULg2CP0zJYTDQPwpB3s~bbtm7dhmIX4~ipUbw3cN6DNzn8Cgpfycj~F4lubQlvYyfnpGhN91sQPM4WD7zJk5Jd5KHBh6anis1ShkOK9Pzt-P~ZXZmSCb-IIkN0sb5yQws-dJWQ2Q4MSheH9B8-c1B9DgJb6BohXYFsSFbus3Uo3R3EwD5NCWDNNKzA6MhjmBpHY5~hPECK9bTbnJZh2jFfw3w4DQUaDrhX4sBrj9lEX2Sj~6~3oYtOq2szMq3p983dJ5zeZQ__" />
+                    <div>
+                        <p class="popup-content-detail-Topic">ค้นหาเพื่อจองห้อง</p>
+                        <p class="popup-content-detail-SubTopic">จองห้องประชุม</p>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">สถานะ</p>
+                        <p class="popup-content-detail-SubTopic">ใช้งานได้</p>
+                    </div>
+                </div>
+                <div class="popup-content-detail-right">
+                    <div>
+                        <p class="popup-content-detail-Topic">ห้องประชุม 101</p>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">สถานที่</p>
+                        <p class="popup-content-detail-SubTopic">
+                            สาขาสำนักงานใหญ่
+                        </p>
+                        <p class="popup-content-detail-SubTopic">
+                            อาคารส่วนกลาง
+                        </p>
+                        <p class="popup-content-detail-SubTopic">
+                            ชั้น 1
+                        </p>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">จำนวนความจุ</p>
+                        <p class="popup-content-detail-SubTopic">10 คน</p>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">สิ่งอำนวยความสะดวกภายในห้อง</p>
+                        <ul class="popup-content-detail-SubTopic">
+                            <li>จอภาพ</li>
+                            <li>ไมค์</li>
+                            <li>เชื่อมต่อหน้าจอแบบไร้สาย</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">ค่าใช้จ่าย/ชั่วโมง</p>
+                        <p class="popup-content-detail-SubTopic">200 บาท</p>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-btn-container">
+                <button class="button-common" onclick="closePopup(1)" style="background-color:#118AB2; margin-right:15px;">
+                    กลับ
+                </button>
+                <a asp-action="Booking" asp-controller="RoomManage" class="button-common" style="background-color:#4AC05D;">
+                    จอง
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-container2" class="popup-container">
+        <!-- Popup content goes here -->
+        <div class="popup-content">
+            <div style="text-align:center; margin-top:20px;">
+                <p class="popup-Topic">รายละเอียด</p>
+            </div>
+            <div class="popup-content-detail">
+                <div class="popup-content-detail-left">
+                    <img src="https://s3-alpha-sig.figma.com/img/1768/2888/5899620cab351b043921b3ecdcd2ad9d?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZhBHlEwwGcUeCnxjD2YAS37~oPhUVuo6CAKcHywpjGUmXsaJ22WFyhrOzb~7CKCukibVoK1NXkCyxHULg2CP0zJYTDQPwpB3s~bbtm7dhmIX4~ipUbw3cN6DNzn8Cgpfycj~F4lubQlvYyfnpGhN91sQPM4WD7zJk5Jd5KHBh6anis1ShkOK9Pzt-P~ZXZmSCb-IIkN0sb5yQws-dJWQ2Q4MSheH9B8-c1B9DgJb6BohXYFsSFbus3Uo3R3EwD5NCWDNNKzA6MhjmBpHY5~hPECK9bTbnJZh2jFfw3w4DQUaDrhX4sBrj9lEX2Sj~6~3oYtOq2szMq3p983dJ5zeZQ__" />
+                    <div>
+                        <p class="popup-content-detail-Topic">ค้นหาเพื่อจองห้อง</p>
+                        <p class="popup-content-detail-SubTopic">จองห้องประชุม</p>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">สถานะ</p>
+                        <p class="popup-content-detail-SubTopic">ใช้งานได้</p>
+                    </div>
+                </div>
+                <div class="popup-content-detail-right">
+                    <div>
+                        <p class="popup-content-detail-Topic">ห้องประชุม 102</p>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">สถานที่</p>
+                        <p class="popup-content-detail-SubTopic">
+                            สาขาสำนักงานใหญ่
+                        </p>
+                        <p class="popup-content-detail-SubTopic">
+                            อาคาร เอ
+                        </p>
+                        <p class="popup-content-detail-SubTopic">
+                            ชั้น 2
+                        </p>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">จำนวนความจุ</p>
+                        <p class="popup-content-detail-SubTopic">20 คน</p>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">สิ่งอำนวยความสะดวกภายในห้อง</p>
+                        <ul class="popup-content-detail-SubTopic">
+                            <li>จอภาพ</li>
+                            <li>ไมค์</li>
+                            <li>เชื่อมต่อหน้าจอแบบไร้สาย</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">ค่าใช้จ่าย/ชั่วโมง</p>
+                        <p class="popup-content-detail-SubTopic">ไม่มี</p>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-btn-container">
+                <button class="button-common" onclick="closePopup(2)" style="background-color:#118AB2; margin-right:15px;">
+                    กลับ
+                </button>
+                <a asp-action="Booking" asp-controller="RoomManage" class="button-common" style="background-color:#4AC05D;">
+                    จอง
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-container3" class="popup-container">
+        <!-- Popup content goes here -->
+        <div class="popup-content">
+            <div style="text-align:center; margin-top:20px;">
+                <p class="popup-Topic">รายละเอียด</p>
+            </div>
+            <div class="popup-content-detail">
+                <div class="popup-content-detail-left">
+                    <img src="https://s3-alpha-sig.figma.com/img/1768/2888/5899620cab351b043921b3ecdcd2ad9d?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZhBHlEwwGcUeCnxjD2YAS37~oPhUVuo6CAKcHywpjGUmXsaJ22WFyhrOzb~7CKCukibVoK1NXkCyxHULg2CP0zJYTDQPwpB3s~bbtm7dhmIX4~ipUbw3cN6DNzn8Cgpfycj~F4lubQlvYyfnpGhN91sQPM4WD7zJk5Jd5KHBh6anis1ShkOK9Pzt-P~ZXZmSCb-IIkN0sb5yQws-dJWQ2Q4MSheH9B8-c1B9DgJb6BohXYFsSFbus3Uo3R3EwD5NCWDNNKzA6MhjmBpHY5~hPECK9bTbnJZh2jFfw3w4DQUaDrhX4sBrj9lEX2Sj~6~3oYtOq2szMq3p983dJ5zeZQ__" />
+                    <div>
+                        <p class="popup-content-detail-Topic">ค้นหาเพื่อจองห้อง</p>
+                        <p class="popup-content-detail-SubTopic">จองห้องประชุม</p>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">สถานะ</p>
+                        <p class="popup-content-detail-SubTopic">ใช้งานได้</p>
+                    </div>
+                </div>
+                <div class="popup-content-detail-right">
+                    <div>
+                        <p class="popup-content-detail-Topic">ห้องประชุม 103</p>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">สถานที่</p>
+                        <p class="popup-content-detail-SubTopic">
+                            สาขาสำนักงานใหญ่
+                        </p>
+                        <p class="popup-content-detail-SubTopic">
+                            อาคาร บี
+                        </p>
+                        <p class="popup-content-detail-SubTopic">
+                            ชั้น 3
+                        </p>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">จำนวนความจุ</p>
+                        <p class="popup-content-detail-SubTopic">30 คน</p>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">สิ่งอำนวยความสะดวกภายในห้อง</p>
+                        <ul class="popup-content-detail-SubTopic">
+                            <li>จอภาพ</li>
+                            <li>ไมค์</li>
+                            <li>เชื่อมต่อหน้าจอแบบไร้สาย</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="popup-content-detail-Topic">ค่าใช้จ่าย/ชั่วโมง</p>
+                        <p class="popup-content-detail-SubTopic">150 บาท</p>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-btn-container">
+                <button class="button-common" onclick="closePopup(3)" style="background-color:#118AB2; margin-right:15px;">
+                    กลับ
+                </button>
+                <a asp-action="Booking" asp-controller="RoomManage" class="button-common" style="background-color:#4AC05D;">
+                    จอง
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    function ShowFilterOption() {
+        var x = document.getElementById("filter-search-option");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            $("#filter-search-triangle").css('visibility', 'visible');
+        } else {
+            x.style.display = "none";
+            $("#filter-search-triangle").css('visibility', 'hidden');
+        }
+    }
+    function openPopup(e) {
+        document.body.classList.add('no-scroll');
+        if (e == 1) {
+            var popup = document.getElementById('popup-container1');
+            popup.style.display = 'flex';
+        }
+        if (e == 2) {
+            var popup = document.getElementById('popup-container2');
+            popup.style.display = 'flex';
+        }
+        if (e == 3) {
+            var popup = document.getElementById('popup-container3');
+            popup.style.display = 'flex';
+        }
+    }
+
+    function closePopup(e) {
+        document.body.classList.remove('no-scroll');
+        if (e == 1) {
+            var popup = document.getElementById('popup-container1');
+            popup.style.display = 'none';
+        }
+        if (e == 2) {
+            var popup = document.getElementById('popup-container2');
+            popup.style.display = 'none';
+        }
+        if (e == 3) {
+            var popup = document.getElementById('popup-container3');
+            popup.style.display = 'none';
+        }
+    }
+
+    function checkCapacityInput(e) {
+        if (e.value > 500) {
+            e.value = 500;
+        }
+    }
+</script>

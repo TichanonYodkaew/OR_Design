@@ -1,0 +1,226 @@
+﻿<link rel="stylesheet" href="~/css/BookingManageCSS.css" asp-append-version="true" />
+
+<body>
+    <div style="text-align:center;">
+        <p class="Topic">จอง</p>
+        <p class="SubTopic">จองห้องประชุม | ค้นหาเพื่อจองห้อง</p>
+    </div>
+
+    <div class="container">
+        <form>
+            <div class="form-container">
+                <div class="form-container-item form-label-adjust">
+                    <label>ชื่อห้องประชุม :</label>
+                </div>
+                <div class="form-container-item">
+                    <p>ห้องประชุม 10*</p>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-container-item form-label-adjust">
+                    <label><span style="color:red">*</span>วันที่ที่ต้องการใช้งาน :</label>
+                </div>
+                <div class="form-container-item">
+                    <input type="date" />
+                </div>
+            </div>
+
+            @* <div class="form-container-four-grid">
+            <div class="form-container-four-grid-item form-label-adjust">
+                    <label><span style="color:red">*</span>ตั้งแต่เวลา :</label>
+                </div>
+                <div class="form-container-four-grid-item">
+                    <select>
+                        <option value="0">8.00</option>
+                        <option value="0">8.30</option>
+                        <option value="0">9.00</option>
+                        <option value="0">9.30</option>
+                        <option value="0">10.00</option>
+                        <option value="0">10.30</option>
+                        <option value="0">11.00</option>
+                        <option value="0">11.30</option>
+                        <option value="0">12.00</option>
+                        <option value="0">12.30</option>
+                        <option value="0">13.00</option>
+                        <option value="0">13.30</option>
+                        <option value="0">14.00</option>
+                        <option value="0">14.30</option>
+                        <option value="0">15.00</option>
+                        <option value="0">15.30</option>
+                        <option value="0">16.00</option>
+                        <option value="0">16.00</option>
+                        <option value="0">17.00</option>
+                    </select>
+                </div>
+            <div class="form-container-four-grid-item form-label-adjust">
+                    <label><span style="color:red">*</span>ถึงเวลา :</label>
+                </div>
+                <div class="form-container-four-grid-item">
+                    <select>
+                        <option value="0">8.00</option>
+                        <option value="0">8.30</option>
+                        <option value="0">9.00</option>
+                        <option value="0">9.30</option>
+                        <option value="0">10.00</option>
+                        <option value="0">10.30</option>
+                        <option value="0">11.00</option>
+                        <option value="0">11.30</option>
+                        <option value="0">12.00</option>
+                        <option value="0">12.30</option>
+                        <option value="0">13.00</option>
+                        <option value="0">13.30</option>
+                        <option value="0">14.00</option>
+                        <option value="0">14.30</option>
+                        <option value="0">15.00</option>
+                        <option value="0">15.30</option>
+                        <option value="0">16.00</option>
+                        <option value="0">16.00</option>
+                        <option value="0">17.00</option>
+                    </select>
+                </div>
+            </div> *@
+            
+            <div class="form-container-fg">
+                <div class="form-container-fg-item">
+                    <div class="form-label-adjust">
+                        <label><span style="color:red">*</span>ตั้งแต่เวลา :</label>
+                    </div>
+                    <div >
+                        <select>
+                            <option value="0"></option>
+                            <option value="0">8.00</option>
+                            <option value="0">8.30</option>
+                            <option value="0">9.00</option>
+                            <option value="0">9.30</option>
+                            <option value="0">10.00</option>
+                            <option value="0">10.30</option>
+                            <option value="0">11.00</option>
+                            <option value="0">11.30</option>
+                            <option value="0">12.00</option>
+                            <option value="0">12.30</option>
+                            <option value="0">13.00</option>
+                            <option value="0">13.30</option>
+                            <option value="0">14.00</option>
+                            <option value="0">14.30</option>
+                            <option value="0">15.00</option>
+                            <option value="0">15.30</option>
+                            <option value="0">16.00</option>
+                            <option value="0">16.00</option>
+                            <option value="0">17.00</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-container-fg-item">
+                    <div class="form-label-adjust">
+                        <label><span style="color:red">*</span>ถึงเวลา :</label>
+                    </div>
+                    <div>
+                        <select>
+                            <option value="0"></option>
+                            <option value="0">8.00</option>
+                            <option value="0">8.30</option>
+                            <option value="0">9.00</option>
+                            <option value="0">9.30</option>
+                            <option value="0">10.00</option>
+                            <option value="0">10.30</option>
+                            <option value="0">11.00</option>
+                            <option value="0">11.30</option>
+                            <option value="0">12.00</option>
+                            <option value="0">12.30</option>
+                            <option value="0">13.00</option>
+                            <option value="0">13.30</option>
+                            <option value="0">14.00</option>
+                            <option value="0">14.30</option>
+                            <option value="0">15.00</option>
+                            <option value="0">15.30</option>
+                            <option value="0">16.00</option>
+                            <option value="0">16.00</option>
+                            <option value="0">17.00</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="form-container">
+                <div class="form-container-item form-label-adjust">
+                    <label><span style="color:red">*</span> ชื่อการประชุม :</label>
+                </div>
+                <div class="form-container-item">
+                    <input class="longinput" type="text" />
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-container-item form-label-adjust">
+                    <label class="label-for-objective-meeting">วัตถุประสงค์การประชุม :</label>
+                </div>
+                <div class="form-container-item">
+                    <textarea></textarea>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-container-item form-label-adjust">
+                    <label><span style="color:red">*</span>ประเภทการประชุม :</label>
+                </div>
+                <div class="form-container-item-radio">
+                    <div class="div-contain-radio">
+                        <input type="radio" id="typemeeting1" name="meetingType" value="typemeeting1" />
+                        <label for="typemeeting1">การประชุมภายใน</label>
+                    </div>
+                    <div class="div-contain-radio">
+                        <input type="radio" id="typemeeting2" name="meetingType" value="typemeeting2" />
+                        <label for="typemeeting2">การประชุมภายนอก</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <div class="form-container-item form-label-adjust">
+                    <label>เอกสารแนบ :</label>
+                </div>
+                <div class="form-container-item">
+                    <input type="file" id="fileInput" name="fileInput" class="input-file">
+                    <label for="fileInput" class="file-label">+แบบไฟล์</label>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <div class="form-container-item form-label-adjust">
+                    <label class="detail_user_reserve"><span style="color:red">*</span>รายละเอียดผู้จอง :</label>
+                </div>
+                <div class="form-container-item-three-grid">
+                    <div class="form-container-item-three-grid-item">
+                        <label for="UserName">ชื่อผู้ใช้</label>
+                        <input type="text" id="UserName" name="UserName" />
+                    </div>
+                    <div class="form-container-item-three-grid-item">
+                        <label for="UserName">เบอร์โทรศัพท์</label>
+                        <input type="text" id="UserName" name="UserName" />
+                    </div>
+                    <div class="form-container-item-three-grid-item">
+                        <label for="UserName">ชื่ออีเมล</label>
+                        <input type="text" id="UserName" name="UserName" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <div class="form-container-item form-label-adjust">
+                    <label class="label-for-attendees">ผู้เข้าร่วม :</label>
+                </div>
+                <div class="form-container-item">
+                    <textarea class="longtextarea"></textarea>
+                </div>
+            </div>
+
+            <div class="form-btn-save-adjust">
+                <!-- HTML ! -->
+                @* <button class="button-save position-button-save" role="button">บันทึก</button> *@
+                <a asp-action="Seraching" asp-controller="RoomManage" class="button-save position-button-save" role="button">บันทึก</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+

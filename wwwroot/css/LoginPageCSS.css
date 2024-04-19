@@ -1,0 +1,202 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+.log-body {
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://s3-alpha-sig.figma.com/img/d806/b0b6/c3d1cf523586a7546d5e144b884b2a1d?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yn34QeQkfU0TW8FN0x3Gs32WZGrEDH~~Oc5Ror3kahukq7EXSxepPWksC5ArIGl9wJLXVFCeEUX6gcvNoLzXnmOtVPrp5uBsTvk-4hc-4W5zaLTyYQ8RxpVuf5yNjCgCXY2ETctU1xr-c4dxa~GiyaMalggRBiEQSzo87e2Ym~WmqvfnS5Rpn27Hsrd09Kbfnbc3tnR1HuaG4sKsaNbTeiKzsZrVhPgBHE2OdJpM0ad6YmAyZ7KiqvwOVxYgekBp4Jcbcer2Y89U0MDcfhkF9yv2gVvx6Tjo~BbhkqslrTxLghdNjJq8YChXyFARtaeouOk7gfFXLRy76YY6MBCalQ__");
+    background-size: cover;*/ /* หรือจะใช้ contain ก็ได้ตามต้องการ */
+/*background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.container {
+    margin: 50px auto;
+}
+
+.body {
+    position: relative;
+    width: 720px;
+    height: 440px;
+    margin: 20px auto;*/
+/*border: 1px solid #dddd;*/
+/*border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box-1 img {
+    width: 200%;
+    height: 200%;
+    object-fit: cover;
+}
+
+.box-2 {
+    background-color: white;
+    padding: 10px;
+}
+
+.box-1,
+.box-2 {
+    width: 50%;
+}
+
+.h-1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.text-muted {
+    font-size: 14px;
+}
+
+.container .box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    text-decoration: none;
+    color: #615f5fdd;
+}
+
+.box:active,
+.box:visited {
+    border: 2px solid #ee82ee;
+}
+
+.box:hover {
+    border: 2px solid #ee82ee;
+}
+
+.btn.btn-primary {
+    background-color: transparent;
+    color: #ee82ee;
+    border: 0px;
+    padding: 0;
+    font-size: 14px;
+}
+
+    .btn.btn-primary .fas.fa-chevron-right {
+        font-size: 12px;
+    }
+
+
+@media (max-width:767px) {
+    body {
+        padding: 10px;
+    }
+
+    .body {
+        width: 100%;
+        height: 100%;
+    }
+
+    .box-1 {
+        width: 100%;
+    }
+
+    .box-2 {
+        width: 100%;
+        height: 440px;
+    }
+}*/
+
+.container {
+    font-family: 'Kanit';
+    vertical-align: middle;
+    width: 90%;
+}
+
+    .container a {
+        text-decoration: none;
+        font-size: 16px;
+        color: gray;
+    }
+
+.logo img {
+    width: 142.65px;
+    height: 70px;
+}
+
+body {
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://s3-alpha-sig.figma.com/img/d806/b0b6/c3d1cf523586a7546d5e144b884b2a1d?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yn34QeQkfU0TW8FN0x3Gs32WZGrEDH~~Oc5Ror3kahukq7EXSxepPWksC5ArIGl9wJLXVFCeEUX6gcvNoLzXnmOtVPrp5uBsTvk-4hc-4W5zaLTyYQ8RxpVuf5yNjCgCXY2ETctU1xr-c4dxa~GiyaMalggRBiEQSzo87e2Ym~WmqvfnS5Rpn27Hsrd09Kbfnbc3tnR1HuaG4sKsaNbTeiKzsZrVhPgBHE2OdJpM0ad6YmAyZ7KiqvwOVxYgekBp4Jcbcer2Y89U0MDcfhkF9yv2gVvx6Tjo~BbhkqslrTxLghdNjJq8YChXyFARtaeouOk7gfFXLRy76YY6MBCalQ__");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure the body takes the full height of the viewport */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img-left {
+    width: 50%;
+    background: scroll center url('https://s3-alpha-sig.figma.com/img/d806/b0b6/c3d1cf523586a7546d5e144b884b2a1d?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yn34QeQkfU0TW8FN0x3Gs32WZGrEDH~~Oc5Ror3kahukq7EXSxepPWksC5ArIGl9wJLXVFCeEUX6gcvNoLzXnmOtVPrp5uBsTvk-4hc-4W5zaLTyYQ8RxpVuf5yNjCgCXY2ETctU1xr-c4dxa~GiyaMalggRBiEQSzo87e2Ym~WmqvfnS5Rpn27Hsrd09Kbfnbc3tnR1HuaG4sKsaNbTeiKzsZrVhPgBHE2OdJpM0ad6YmAyZ7KiqvwOVxYgekBp4Jcbcer2Y89U0MDcfhkF9yv2gVvx6Tjo~BbhkqslrTxLghdNjJq8YChXyFARtaeouOk7gfFXLRy76YY6MBCalQ__');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-body {
+    background-color: #fbfbfb;
+}
+
+.btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+}
+
+.align-right {
+    text-align: right;
+}
+
+
+/* CSS */
+.button-3 {
+    appearance: none;
+    background-color: #012E65;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 20px;
+    padding: 10px 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+}
+
+.button-3:hover {
+    background-color: #053877;
+}
+
+.button-3:disabled {
+    background-color: #004ca9;
+    opacity:50%;
+    pointer-events:none;
+}
+
+.button-3:active {
+    background-color: #012E65;
+}

@@ -1,0 +1,87 @@
+﻿@import url(https://db.onlinewebfonts.com/c/92ff8a15048d7347e0fae46d6386f338?family=DB+HelvethaicaMon+X+Cond);
+footer.fixed-bottom {
+    bottom: 0;
+    position: absolute;
+    z-index: 998;
+}
+
+
+.footer__logo img {
+    width: 47.67px;
+    height: 25px;
+}
+
+
+.site-footer {
+    background-color: #0D385B;
+    padding: 15px 0 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "DB HelvethaicaMon X Cond";
+    color: #fff;
+    overflow:hidden;
+}
+
+    .site-footer p {
+        margin-bottom : 5px;
+        font-weight: 400;
+        padding: 0;
+    }
+    .site-footer p .weight700{
+        font-weight: 700 !important;
+    }
+
+    .site-footer a {
+        color: #737373;
+    }
+
+        .site-footer a:hover {
+            color: #3366cc;
+            text-decoration: none;
+        }
+
+.footer-row {
+    display: grid;
+    grid-template-columns: 0.5fr 4fr 3fr;
+}
+
+.footer-col1,
+.footer-col2 {
+
+    margin: 0;
+    padding: 0;
+}
+
+.footer-col3 {
+    margin-left: 30px;
+    padding: 0;
+}
+
+.hiden-footer {
+    display: none;
+}
+
+@media(max-width: 1080px) {
+    .containe-footer-row {
+        display: none;
+    }
+    .first-show {
+        display: none;
+    }
+
+    .hiden-footer{
+        display:block;
+    }
+
+    .remain-footer {
+        display: none;
+    }
+    .site-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+}
